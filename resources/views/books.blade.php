@@ -9,7 +9,7 @@
   <meta charset="UFT-8">
   <meta name="viewport" content="width-device-width, initial-scale-1.0">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
-  <title>Add Animal</title>
+  <title>Add Book</title>
 </head>
 <body>
   <!--Container for the form to sit within-->
@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-default">
-          <div class="panel-heading">Add Animal</div>
+          <div class="panel-heading">Add Book</div>
             <div class="panel-body">
 
             </div>
