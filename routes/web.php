@@ -29,3 +29,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/landing', function () {
+    return view('landing');
+});
+
+Route::get('/landing', 'BookController@display');
+
+Route::get('/booksLoggedIn', 'BookController@displayBooksLoggedIn');
+
+Route::get('/booksPublic', 'BookController@displayBooksPublic');
