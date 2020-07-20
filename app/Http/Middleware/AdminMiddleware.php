@@ -2,9 +2,8 @@
 
 namespace App\Http\Middleware;
 
-
-
 use Closure;
+use Auth;
 
 
 
@@ -19,10 +18,13 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-      if ($request->user()->is_admin = '1')
-      {
-        return redirect('AdminDashboard');
+      if (Auth::user()){
+        if(Auth::user()->is_admin){
+          return $next($request);
+        }
+        return redirect('booksLoggedIn');
       }
-      return $next($request);
+      return redirect('login');
+
     }
 }
