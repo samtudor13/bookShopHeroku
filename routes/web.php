@@ -40,3 +40,7 @@ Route::get('/admin',['middleware' => 'adminmiddleware', function () {
 //Route::resource('admin', 'BookController');
 
 Route::post('admin', 'BookController@store')->name('admin');
+
+Route::get('/', function () {
+    return redirect('landing');
+});
