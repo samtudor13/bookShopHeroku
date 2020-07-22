@@ -23,7 +23,7 @@
                   <th scope="col">Title</th>
                   <th scope="col">Author</th>
                   <th scope="col">Category</th>
-                  <th scope="col">Price</th>
+                  <th scope="col">Price (£)</th>
                   <th scope="col">Cover</th>
                   <th scope="col">Buy</th>
                 </tr>
@@ -49,7 +49,7 @@
 
                 </tr>
                 @endforeach
-                
+
               </tbody>
             </table>
           </div>
