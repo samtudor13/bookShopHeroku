@@ -44,7 +44,9 @@
                   <th> {{ $book->author }} </th>
                   <th> {{ $book->category }} </th>
                   <th> {{ $book->price }} </th>
-                  <th> {{ $book->cover_pic }} </th>
+                  <th>
+                    <img src="{{ $book->cover_pic }}" alt="cover" style="width:125px;height:150px;"> <!--use image URL to render image-->
+                   </th>
 
                   <!--Buy button-->
                   <th> <a href="/landing" class="btn btn-success">BUY</></th>
