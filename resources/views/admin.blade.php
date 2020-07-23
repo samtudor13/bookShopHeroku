@@ -14,33 +14,36 @@
     <div class="row justify-content-center">
       <div class="col-md-12">
         <div class="card">
+          <!--adds user name and welcome msg to top of container-->
           <div class="card-header">Welcome {{{ Auth::user()->name }}} (ADMIN) <hr /> Add New Book</div>
           <div class="card-body">
             @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            @if(count($errors) > 0)
-              <div class="alert alert-danger">
-                <ul>
-                  @foreach($errors->all() as $error)
-                  <li>
-                    {{$error}}
-                  </li>
-                  @endforeach
-                </ul>
-              </div>
-            @endif
-
-            @if(\Session::has('success'))
-            <div class="alert alert-success">
-                <p>
-                  {{\Session::get('success')}}
-                </p>
+            <div class="alert alert-success" role="alert">
+              {{ session('status') }}
             </div>
             @endif
+            <!--if errors are encountered, displayed to user above form-->
+            @if(count($errors) > 0)
+            <div class="alert alert-danger">
+              <ul>
+                @foreach($errors->all() as $error)
+                <li>
+                  {{$error}}
+                </li>
+                @endforeach
+              </ul>
+            </div>
+            @endif
+
+            <!--display success message if books create is successful-->
+            @if(\Session::has('success'))
+            <div class="alert alert-success">
+              <p>
+                {{\Session::get('success')}}
+              </p>
+            </div>
+            @endif
+            <!--form to add book to database-->
             <form method="post" action="{{url('admin')}}">
               {{csrf_field()}}
               <div class="form-group">
@@ -60,26 +63,27 @@
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary" />
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-</div>
-<br />
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">View all orders</div>
-        <div class="card-body">
+    <br />
+    <!--new container for further admin functions-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">View all orders</div>
+            <div class="card-body">
 
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-</body>
-</html>
-@endsection
+  </body>
+  </html>
+  @endsection

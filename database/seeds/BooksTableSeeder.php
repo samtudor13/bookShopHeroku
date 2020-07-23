@@ -10,7 +10,7 @@ class BooksTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run()   //populates books table with inital sample/test data
     {
       $books = [
         [

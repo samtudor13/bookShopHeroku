@@ -17,7 +17,8 @@
           <div class="card-header">Book Store (Public)</div>
           <div class="card-body">
 
-                  <table class="table tbale-stripped table-bordered">
+            <!-- setup table to display all books in datbase-->
+            <table class="table tbale-stripped table-bordered">
               <thead>
                 <tr>
                   <th scope="col">Title</th>
@@ -29,9 +30,7 @@
                 </tr>
               </thead>
 
-
-
-              <!--The contents of the table (gets data from Database)-->
+              <!--Populates table from database-->
               <tbody>
                 @foreach($books as $book)
                 <tr>
@@ -41,23 +40,20 @@
                   <th> {{ $book->price }} </th>
                   <th> {{ $book->cover_pic }} </th>
 
-
-
-
-                  <!--Edit button-->
+                  <!--Buy button-->
                   <th> <a href="/landing" class="btn btn-success">BUY</></th>
 
-                </tr>
-                @endforeach
+                  </tr>
+                  @endforeach
 
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
 
 </body>
 </html>

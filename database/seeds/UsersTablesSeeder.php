@@ -10,7 +10,7 @@ class UsersTablesSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run()   //populates books table with inital sample/test users
     {
       $users = [
         [

@@ -16,7 +16,7 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next) //redirects user to correct page based on role
     {
       if (Auth::user()){
         if(Auth::user()->is_admin){
