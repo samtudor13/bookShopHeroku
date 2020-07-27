@@ -14,7 +14,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-header">Book Store (Public)</div>
+          <div class="card-header">Welcome to AstonBookStore guest</div>
           <div class="card-body">
 
             <!-- setup table to display all books in datbase-->
@@ -26,7 +26,6 @@
                   <th scope="col">Category</th>
                   <th scope="col">Price (£)</th>
                   <th scope="col">Cover</th>
-                  <th scope="col">Buy</th>
                 </tr>
               </thead>
 
@@ -39,10 +38,9 @@
                   <th> {{ $book->category }} </th>
                   <th> {{ $book->price }} </th>
                   <th>
-                    <img src="{{ $book->cover_pic }}" alt="cover" style="width:125px;height:150px;"> //use image URL to render image
+                    <img src="{{ $book->cover_pic }}" alt="cover" style="width:125px;height:150px;"> <!--use image URL to render image-->
                    </th>
-                  <!--Buy button-->
-                  <th> <a href="/landing" class="btn btn-success">BUY</></th>
+
 
                   </tr>
                   @endforeach
@@ -53,7 +51,6 @@
           </div>
         </div>
       </div>
-    </form>
   </div>
 
 </body>

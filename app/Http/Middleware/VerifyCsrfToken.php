@@ -11,7 +11,9 @@ class VerifyCsrfToken extends Middleware
      *
      * @var array
      */
-    protected $except = [
-        //
-    ];
+     //prevents page expired issue on logout
+     protected $except = [
+         'http://example.com/logout',
+     ];
+
 }

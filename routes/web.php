@@ -31,15 +31,14 @@ Route::get('/booksPublic', 'BookController@displayBooksPublic');
 //user books - logged in
 Route::get('/booksLoggedIn', 'BookController@displayBooksLoggedIn')->middleware('auth');
 
-//admin
-//Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function(){});
-
-//admin route inc authentication
-Route::get('/admin',['middleware' => 'adminmiddleware', function () {
-    return view('admin');
-}]);
-
-//Route::resource('admin', 'BookController');
+//admin routes with access restricted via middleware
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
+{
+Route::get('/admin', 'BookController@index');
+Route::get('/editBook/{id}', 'BookController@edit');
+Route::post('/editBook/{id}', 'BookController@update');
+Route::post('/admin/{id}', 'BookController@destroy');
+});
 
 //post rights to admin page
 Route::post('admin', 'BookController@store')->name('admin');
@@ -48,3 +47,11 @@ Route::post('admin', 'BookController@store')->name('admin');
 Route::get('/', function () {
     return redirect('landing');
 });
+
+Route::get('cart', 'BookController@cart');
+//add to cart route
+Route::get('add-to-cart/{id}', 'BookController@addToCart');
+//route to update cart
+Route::patch('update-cart', 'BookController@cartUpdate');
+//route to remove from cart
+Route::delete('remove-from-cart', 'BookController@cartRemove');

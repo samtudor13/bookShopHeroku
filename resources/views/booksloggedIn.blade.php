@@ -49,7 +49,9 @@
                    </th>
 
                   <!--Buy button-->
-                  <th> <a href="/landing" class="btn btn-success">BUY</></th>
+                  <!--<th> <a href="/landing" class="btn btn-success">BUY</></th>-->
+                  <th>  <a href="{{ url('add-to-cart/'.$book->id) }}" class="btn btn-warning btn-block text-center" role="button">Add to cart</a>  </th>
+
                   </tr>
                   @endforeach
 
