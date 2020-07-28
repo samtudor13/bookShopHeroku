@@ -46,7 +46,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'https://cs2410-web01pvm.aston.ac.uk/phpmyadmin'),
+            'host' => env('DB_HOST', 'https://cs2410-web01pvm.aston.ac.uk'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'u_180191543_db'),
             'username' => env('DB_USERNAME', 'u-180191543'),
