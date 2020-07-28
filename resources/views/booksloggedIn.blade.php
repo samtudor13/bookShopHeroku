@@ -32,7 +32,7 @@
                   <th scope="col">Category</th>
                   <th scope="col">Price (£)</th>
                   <th scope="col">Cover</th>
-                  <th scope="col">Buy</th>
+                  <th scope="col">Add to Basket</th>
                 </tr>
               </thead>
 
